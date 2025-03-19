@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ZaPaChi Home</title>
+    <title>Contacto - ZaPaChi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -22,71 +22,44 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="../html/index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="../html/catalogo.html">Catalogo</a></li>
                     <li class="nav-item"><a class="nav-link" href="../html/carrito.html">Carrito</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../html/contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../html/contacto.html">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
-    <!-- Carrusel -->
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <!-- Imagen 1 -->
-            <div class="carousel-item active" style="background-image: url('../img/bienvenido.jpeg');">
-                <div class="overlay"><!-- un contenedor para textos -->
-                    <h1>Bienvenido a ZaPaChi</h1>
-                </div>
+
+    <!-- Contenedor del formulario de contacto -->
+    <div class="container mt-5 pt-5">
+        <h1 class="text-center mb-4">Contacto</h1>
+        <form id="contactForm" class="bg-white p-4 rounded shadow">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" required>
+                <span class="error" id="nombreError"></span>
             </div>
-            <!-- Imagen 2 -->
-            <div class="carousel-item" style="background-image: url('../img/encuentra_calzado.jpeg');">
-                <div class="overlay"><!-- un contenedor para textos -->
-                    <h1>Encuentra calzado</h1>
-                </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+                <span class="error" id="emailError"></span>
             </div>
-            <!-- Imagen 3 -->
-            <div class="carousel-item" style="background-image: url('../img/ropas_a_la_moda.jpeg');">
-                <div class="overlay"><!-- un contenedor para textos -->
-                    <h1>Encuentra prendas a la moda</h1>
-                </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" class="form-control" required>
+                <span class="error" id="telefonoError"></span>
             </div>
-        </div>
-        <!-- carousel-control-prev boton para diapositiva anterior -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span><!-- carousel-control-prev-icon iconos para flechas de navegacin -->
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span><!-- carousel-control-prev-icon iconos para flechas de navegacin -->
-            <span class="visually-hidden">Siguiente</span>
-        </button>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" class="form-control" rows="5" required></textarea>
+                <span class="error" id="mensajeError"></span>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Enviar</button>
+        </form>
     </div>
 
-
-    <!-- SECCIÓN NOSOTROS -->
-    <div id="nosotros" class="container mt-5">
-        <div class="row align-items-center">
-            <!-- Texto a la izquierda -->
-            <div class="col-md-6">
-                <h2>Nosotros</h2>
-                <p>Somos una empresa dedicada a ofrecer los mejores productos con calidad garantizada. Nuestro compromiso es brindar excelencia en cada artículo que vendemos.</p>
-                <p>Con años de experiencia en el mercado, buscamos innovar y proporcionar las mejores opciones para nuestros clientes.</p>
-            </div>
-            <!-- Imagen a la derecha -->
-            <div class="col-md-6">
-                <img src="../img/logo.png" alt="Nuestra Compañía" class="img-fluid rounded">
-            </div>
-        </div>
-    </div>
-
-     <!-- BOTÓN FLOTANTE -->
-     <button id="btnNosotros" class="btn btn-primary">Nosotros</button>
-     <!-- btn-primary para que el boton sea color azul -->
-
-
-     <!-- Botón flotante para abrir/cerrar la calculadora -->
+    <!-- Botón flotante para abrir/cerrar la calculadora -->
     <button id="toggleCalculator" class="btn btn-primary floating-btn">🖩</button>
 
     <!-- Calculadora flotante -->
@@ -125,8 +98,7 @@
         </div>
     </div>
 
-    <script src="../scripts/producto.js"></script>
+    <script src="../scripts/validacion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../scripts/script.js"></script>
 </body>
 </html>
