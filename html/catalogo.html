@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catálogo de Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css"> <!-- Reutilizamos el CSS -->
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <!-- Logo a la izquierda -->
+            <a class="navbar-brand" href="../html/index.html">
+                <img src="../img/logo2.png" alt="Logo" class="logo"> 
+                ZaPaChi
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../html/index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../html/catalogo.html">Catalogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/carrito.html">Carrito</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección del Catálogo -->
+    <div class="container mt-5 pt-5"><!-- mt-5 y pt-5 es para hacer un espacio por arriba y por debajo para el contenedor -->
+        <h1 class="text-center mb-4">Catálogo de Productos</h1>
+        <div class="row">
+            <!-- Playeras -->
+            <div class="col-md-4">
+                <a href="../html/producto.html" class="card-link">
+                    <div class="card">
+                        <img src="../img/playera_hugo.jpg" class="card-img-top" alt="Playera">
+                        <div class="card-body">
+                            <h5 class="card-title">Playera Hugo Boss</h5>
+                            <p class="card-text">$1,999</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Tenis -->
+            <div class="col-md-4">
+                <a href="../html/producto2.html" class="card-link">
+                    <div class="card">
+                        <img src="../img/yezy.jpg" class="card-img-top" alt="Tenis">
+                        <div class="card-body">
+                            <h5 class="card-title">Tenis Yeezy</h5>
+                            <p class="card-text">$7,899</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Gorras -->
+            <div class="col-md-4">
+                <a href="gorras.html" class="card-link">
+                    <div class="card">
+                        <img src="../img/3yos.jpeg" class="card-img-top" alt="Gorra">
+                        <div class="card-body">
+                            <h5 class="card-title">Gorra 3 pablos </h5>
+                            <p class="card-text">$2,499</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Botón flotante para abrir/cerrar la calculadora -->
+    <button id="toggleCalculator" class="btn btn-primary floating-btn">🖩</button>
+
+    <!-- Calculadora flotante -->
+    <div id="calculator" class="card calculator shadow">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <span>Calculadora</span>
+            <button id="closeCalculator" class="btn btn-sm btn-light">✖</button>
+        </div>
+        <div class="card-body">
+            <input type="text" id="calc-display" class="form-control text-end mb-2" disabled>
+            <div class="row g-1">
+                <button class="btn btn-secondary col-3 calc-btn" data-value="7">7</button>
+                <button class="btn btn-secondary col-3 calc-btn" data-value="8">8</button>
+                <button class="btn btn-secondary col-3 calc-btn" data-value="9">9</button>
+                <button class="btn btn-warning col-3 calc-btn" data-value="/">÷</button>
+
+                <button class="btn btn-secondary col-3 calc-btn" data-value="4">4</button>
+                <button class="btn btn-secondary col-3 calc-btn" data-value="5">5</button>
+                <button class="btn btn-secondary col-3 calc-btn" data-value="6">6</button>
+                <button class="btn btn-warning col-3 calc-btn" data-value="*">×</button>
+
+                <button class="btn btn-secondary col-3 calc-btn" data-value="1">1</button>
+                <button class="btn btn-secondary col-3 calc-btn" data-value="2">2</button>
+                <button class="btn btn-secondary col-3 calc-btn" data-value="3">3</button>
+                <button class="btn btn-warning col-3 calc-btn" data-value="-">−</button>
+
+                <button class="btn btn-secondary col-3 calc-btn" data-value="0">0</button>
+                <button class="btn btn-secondary col-3 calc-btn" data-value=".">.</button>
+                <button class="btn btn-danger col-3 calc-btn" data-value="C">C</button>
+                <button class="btn btn-warning col-3 calc-btn" data-value="+">+</button>
+
+                <button class="btn btn-info col-6 calc-btn" data-value="%">%</button>
+                <button class="btn btn-info col-6 calc-btn" data-value="IVA">IVA</button>
+                <button class="btn btn-success col-12 calc-btn" data-value="=">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/script.js"></script> <!-- Archivo JS separado -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

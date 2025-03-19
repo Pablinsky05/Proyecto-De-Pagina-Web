@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZaPaChi Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <!-- Logo a la izquierda -->
+            <a class="navbar-brand" href="../html/index.html">
+                <img src="../img/logo2.png" alt="Logo" class="logo"> 
+                ZaPaChi
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="../html/index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/catalogo.html">Catalogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/carrito.html">Carrito</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Carrusel -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Imagen 1 -->
+            <div class="carousel-item active" style="background-image: url('../img/bienvenido.jpeg');">
+                <div class="overlay"><!-- un contenedor para textos -->
+                    <h1>Bienvenido a ZaPaChi</h1>
+                </div>
+            </div>
+            <!-- Imagen 2 -->
+            <div class="carousel-item" style="background-image: url('../img/encuentra_calzado.jpeg');">
+                <div class="overlay"><!-- un contenedor para textos -->
+                    <h1>Encuentra calzado</h1>
+                </div>
+            </div>
+            <!-- Imagen 3 -->
+            <div class="carousel-item" style="background-image: url('../img/ropas_a_la_moda.jpeg');">
+                <div class="overlay"><!-- un contenedor para textos -->
+                    <h1>Encuentra prendas a la moda</h1>
+                </div>
+            </div>
+        </div>
+        <!-- carousel-control-prev boton para diapositiva anterior -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span><!-- carousel-control-prev-icon iconos para flechas de navegacin -->
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span><!-- carousel-control-prev-icon iconos para flechas de navegacin -->
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+
+    <!-- SECCIÓN NOSOTROS -->
+    <div id="nosotros" class="container mt-5">
+        <div class="row align-items-center">
+            <!-- Texto a la izquierda -->
+            <div class="col-md-6">
+                <h2>Nosotros</h2>
+                <p>Somos una empresa dedicada a ofrecer los mejores productos con calidad garantizada. Nuestro compromiso es brindar excelencia en cada artículo que vendemos.</p>
+                <p>Con años de experiencia en el mercado, buscamos innovar y proporcionar las mejores opciones para nuestros clientes.</p>
+            </div>
+            <!-- Imagen a la derecha -->
+            <div class="col-md-6">
+                <img src="../img/logo.png" alt="Nuestra Compañía" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+
+     <!-- BOTÓN FLOTANTE -->
+     <button id="btnNosotros" class="btn btn-primary">Nosotros</button>
+     <!-- btn-primary para que el boton sea color azul -->
+
+
+     <!-- Botón flotante para abrir/cerrar la calculadora -->
+    <button id="toggleCalculator" class="btn btn-primary floating-btn">🖩</button>
+
+    <!-- Calculadora flotante -->
+    <div id="calculator" class="card calculator shadow">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <span>Calculadora</span>
+            <button id="closeCalculator" class="btn btn-sm btn-light">✖</button>
+        </div>
+        <div class="card-body">
+            <input type="text" id="calc-display" class="form-control text-end mb-2" disabled>
+            <div class="row g-1">
+                <button class="btn btn-secondary col-3 calc-btn" data-value="7">7</button>
+                <button class="btn btn-secondary col-3 calc-btn" data-value="8">8</button>
+                <button class="btn btn-secondary col-3 calc-btn" data-value="9">9</button>
+                <button class="btn btn-warning col-3 calc-btn" data-value="/">÷</button>
+
+                <button class="btn btn-secondary col-3 calc-btn" data-value="4">4</button>
+                <button class="btn btn-secondary col-3 calc-btn" data-value="5">5</button>
+                <button class="btn btn-secondary col-3 calc-btn" data-value="6">6</button>
+                <button class="btn btn-warning col-3 calc-btn" data-value="*">×</button>
+
+                <button class="btn btn-secondary col-3 calc-btn" data-value="1">1</button>
+                <button class="btn btn-secondary col-3 calc-btn" data-value="2">2</button>
+                <button class="btn btn-secondary col-3 calc-btn" data-value="3">3</button>
+                <button class="btn btn-warning col-3 calc-btn" data-value="-">−</button>
+
+                <button class="btn btn-secondary col-3 calc-btn" data-value="0">0</button>
+                <button class="btn btn-secondary col-3 calc-btn" data-value=".">.</button>
+                <button class="btn btn-danger col-3 calc-btn" data-value="C">C</button>
+                <button class="btn btn-warning col-3 calc-btn" data-value="+">+</button>
+
+                <button class="btn btn-info col-6 calc-btn" data-value="%">%</button>
+                <button class="btn btn-info col-6 calc-btn" data-value="IVA">IVA</button>
+                <button class="btn btn-success col-12 calc-btn" data-value="=">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/producto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
