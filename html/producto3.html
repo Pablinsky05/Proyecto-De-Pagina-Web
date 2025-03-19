@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Catálogo de Productos</title>
+    <title>Producto 2- ZaPaChi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css"> <!-- Reutilizamos el CSS -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -22,8 +22,8 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="../html/index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="../html/catalogo.html">Catalogo</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../html/index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/catalogo.html">Catalogo</a></li>
                     <li class="nav-item"><a class="nav-link" href="../html/carrito.html">Carrito</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
                 </ul>
@@ -31,45 +31,31 @@
         </div>
     </nav>
 
-    <!-- Sección del Catálogo -->
-    <div class="container mt-5 pt-5"><!-- mt-5 y pt-5 es para hacer un espacio por arriba y por debajo para el contenedor -->
-        <h1 class="text-center mb-4">Catálogo de Productos</h1>
+    <!-- Contenedor del producto -->
+    <div class="container mt-5 pt-5">
         <div class="row">
-            <!-- Playeras -->
-            <div class="col-md-4">
-                <a href="../html/producto.html" class="card-link">
-                    <div class="card">
-                        <img src="../img/playera_hugo.jpg" class="card-img-top" alt="Playera">
-                        <div class="card-body">
-                            <h5 class="card-title">Playera Hugo Boss</h5>
-                            <p class="card-text">$1,999</p>
-                        </div>
-                    </div>
-                </a>
+            <!-- Imagen del producto -->
+            <div class="col-md-6">
+                <img src="../img/3yos.jpeg" alt="Producto" class="img-fluid rounded shadow">
             </div>
-            <!-- Tenis -->
-            <div class="col-md-4">
-                <a href="../html/producto2.html" class="card-link">
-                    <div class="card">
-                        <img src="../img/yezy.jpg" class="card-img-top" alt="Tenis">
-                        <div class="card-body">
-                            <h5 class="card-title">Tenis Yeezy</h5>
-                            <p class="card-text">$7,899</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Gorras -->
-            <div class="col-md-4">
-                <a href="../html/producto3.html" class="card-link">
-                    <div class="card">
-                        <img src="../img/3yos.jpeg" class="card-img-top" alt="Gorra">
-                        <div class="card-body">
-                            <h5 class="card-title">Gorra 3 pablos </h5>
-                            <p class="card-text">$2,499</p>
-                        </div>
-                    </div>
-                </a>
+
+            <!-- Información del producto -->
+            <div class="col-md-6">
+                <h2>Gorra 3 Pablos</h2>
+                <p class="text-muted">Gorra 3 Pablos Del asador 3 pablos. Materiales de calidad, diseño moderno y excelente comodidad.</p>
+                <h4 class="text-primary">$999.99</h4>
+
+                <!-- Selección de tallas -->
+                <h5>Selecciona tu talla:</h5>
+                <div class="size-options">
+                    <button class="size-btn" data-size="S">S</button>
+                    <button class="size-btn" data-size="M">M</button>
+                    <button class="size-btn" data-size="L">L</button>
+                    <button class="size-btn" data-size="XL">XL</button>
+                </div>
+
+                <!-- Botón de comprar -->
+                <button class="btn btn-success mt-3">Comprar</button>
             </div>
         </div>
     </div>
@@ -114,7 +100,8 @@
         </div>
     </div>
 
-    <script src="../scripts/script.js"></script> <!-- Archivo JS separado -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/producto.js"></script> <!-- Archivo JS separado -->
+    <script src="../scripts/script.js"></script> <!-- Archivo JS separado -->
 </body>
 </html>
